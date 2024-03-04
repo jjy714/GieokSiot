@@ -7,4 +7,4 @@ def home(request):
 
 def todos(request):
     items = TodoItem.objects.all()
-    return render(request, "todos.html", {"todos: ", items})
+    return render(request, "todos.html", {"todos: ": items})
