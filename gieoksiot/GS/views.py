@@ -5,9 +5,9 @@ from .models import TodoItem, People
 def home(request):
     return render(request, "GS/home.html", {})
 
-def index(response, id):
-    ls = People.objects.get(id=id)
-    return render(response, "GS/list.html", {"List" : ls})
+def index(response):
+    ls = People.objects.get(id=2)
+    return render(response, "GS/list.html", {'names' : ls.names})
 
 def todos(request):
     items = TodoItem.objects.all()

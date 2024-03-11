@@ -1,14 +1,17 @@
 <!DOCTYPE HTML>
 
-{% extends "GS/base.html%}
-{% block title %}View List{% endblock%}
+{% extends "GS/base.html" %}
+{% block title %}View List{% endblock %}
 
-{% block title %}
-<h1>{{ls.name}}</h1>
+{% block content %}
+<h1>Welcome {{names}}! </h1>
     <u1>
         {% for item in ls.item_set.all %}
-            <li>{{item.text}}</li>
+            {% if item.complete == True %}
+                <li>{{item.text}} - COMPLETE</li>
+            {% else %}
+                <li>{{item.text}} - INCOMPLETE</li>
+            {% endif %}
         {% endfor %}
     </u1>
-    
-{% endblock%}
+{% endblock %}
