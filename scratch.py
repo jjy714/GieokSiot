@@ -1,6 +1,12 @@
-import sys
-num = int(input())
+a = int(input())
 
-for i in range(num):
-	a1, a2 = map(int, sys.stdin.readline().split())
-	print(f"Case #{i+1}: {a1} + {a2} = " ,a1+a2)
+for i in range(a+1):
+	print("*" * i)
+	
+ 
+for i in range(a+1):
+    
+	for j in range(i):
+		print("*")
+		print('\r')
+  
